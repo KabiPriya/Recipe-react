@@ -4,17 +4,17 @@ function Home({ recipes }) {
   return (
     <div className="home">
       <h2>Recipes</h2>
-      <ul>
+      <div className="recipe-container">
         {recipes.map((recipe, index) => (
-          <li key={index} className="recipe-card">
-            <div>
-              <img src={recipe.imageUrl} alt={recipe.name} />
+          <div key={index} className="recipe-card">
+            <img src={recipe.imageUrl} alt={recipe.name} />
+            <div className="recipe-details">
               <h3>{recipe.name}</h3>
               <p>{recipe.steps}</p>
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

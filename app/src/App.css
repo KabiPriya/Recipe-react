@@ -4,21 +4,25 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-image: url('https://www.shutterstock.com/image-vector/cookery-seamless-background-black-white-600w-1296203521.jpg'); /* Add your background image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .app {
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: gray; /* Semi-transparent white background */
   padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333; /* Dark text color */
 }
 
 nav ul {
@@ -33,42 +37,18 @@ nav li {
   margin: 0 20px;
 }
 
-.add-recipe form {
-  display: flex;
-  flex-direction: column;
-}
-
-.add-recipe label {
-  margin-bottom: 10px;
-}
-
-.add-recipe input,
-.add-recipe textarea {
-  padding: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.add-recipe button[type="submit"] {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.home h2 {
-  text-align: center;
+.recipe-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .recipe-card {
   background-color: #fff;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Slightly transparent shadow */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  flex-basis: calc(33.33% - 20px);
 }
 
 .recipe-card img {
@@ -78,8 +58,10 @@ nav li {
 .recipe-card h3 {
   margin: 10px 0;
   font-size: 18px;
+  color: #333; /* Dark text color */
 }
 
 .recipe-card p {
   margin: 0;
+  color: #666; /* Slightly darker text color */
 }
